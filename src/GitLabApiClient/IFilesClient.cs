@@ -8,5 +8,6 @@ namespace GitLabApiClient
     {
         Task<File> GetAsync(ProjectId projectId, string filePath, string reference = "master");
         Task<string> GetRawAsync(ProjectId projectId, string filePath, string reference = "master");
+        Task<byte[]> GetArchiveAsync(ProjectId projectId, string extension = "tar.gz", string sha = null);
     }
 }

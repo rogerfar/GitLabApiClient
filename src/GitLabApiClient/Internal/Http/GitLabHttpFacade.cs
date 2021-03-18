@@ -71,6 +71,9 @@ namespace GitLabApiClient.Internal.Http
         public Task<string> GetString(string uri) =>
             _requestor.GetString(uri);
 
+        public Task<byte[]> GetBytes(string uri) =>
+            _requestor.GetBytes(uri);
+
         public Task GetFile(string uri, string outputPath) =>
             _requestor.GetFile(uri, outputPath);
 

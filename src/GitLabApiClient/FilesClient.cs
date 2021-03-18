@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using GitLabApiClient.Internal.Http;
 using GitLabApiClient.Internal.Paths;
@@ -21,6 +20,11 @@ namespace GitLabApiClient
         public async Task<string> GetRawAsync(ProjectId projectId, string filePath, string reference = "master")
         {
             return await _httpFacade.GetString($"projects/{projectId}/repository/files/{filePath.UrlEncode()}/raw?ref={reference}");
+        }
+        
+        public async Task<byte[]> GetArchiveAsync(ProjectId projectId, string extension = "tar.gz", string sha = null)
+        {
+            return await _httpFacade.GetBytes($"projects/{projectId}/archive.{extension}/?sha={sha}");
         }
     }
 }
