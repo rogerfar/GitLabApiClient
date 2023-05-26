@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using GitLabApiClient.Internal.Paths;
 using GitLabApiClient.Internal.Utilities;
 using Newtonsoft.Json;
