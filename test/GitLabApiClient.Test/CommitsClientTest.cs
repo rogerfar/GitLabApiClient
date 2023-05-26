@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using FluentAssertions;
 using GitLabApiClient.Internal.Queries;
+using GitLabApiClient.Models.Commits.Requests;
 using GitLabApiClient.Models.Commits.Requests.CreateCommitRequest;
 using Xunit;
 using static GitLabApiClient.Test.Utilities.GitLabApiHelper;
