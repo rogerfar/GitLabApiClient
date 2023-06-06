@@ -24,7 +24,7 @@ namespace GitLabApiClient
         
         public async Task<byte[]> GetArchiveAsync(ProjectId projectId, string extension = "tar.gz", string sha = null)
         {
-            return await _httpFacade.GetBytes($"projects/{projectId}/archive.{extension}/?sha={sha}");
+            return await _httpFacade.GetBytes($"projects/{projectId}/repository/archive.{extension}/?sha={sha}");
         }
     }
 }
