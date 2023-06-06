@@ -27,11 +27,17 @@ namespace GitLabApiClient.Models.MergeRequests.Responses
         [JsonProperty("description")]
         public string Description { get; set; }
 
+        [JsonProperty("detailed_merge_status")]
+        public string DetailedMergeStatus { get; set; }
+
         [JsonProperty("force_remove_source_branch")]
         public bool ForceRemoveSourceBranch { get; set; }
 
         [JsonProperty("milestone")]
         public Milestone Milestone { get; set; }
+
+        [JsonProperty("merge_error")]
+        public string MergeError { get; set; }
 
         [JsonProperty("merge_status")]
         public MergeStatus Status { get; set; }

@@ -52,4 +52,10 @@
     <RepositoryCommit Condition=" '$(RepositoryCommit)' == '' ">$(GitVersion_Sha)</RepositoryCommit>
   </PropertyGroup>
 
+  <Target Name="CopyCustomContent" Condition="'$(Configuration)' == 'Release'" AfterTargets="AfterBuild">
+    <Copy SourceFiles="$(OutDir)\\GitLabApiClient.deps.json" DestinationFolder="C:\\Projects\\fieldsupport\libs\\" />
+    <Copy SourceFiles="$(OutDir)\\GitLabApiClient.dll" DestinationFolder="C:\\Projects\\fieldsupport\\libs\\" />
+    <Copy SourceFiles="$(OutDir)\\GitLabApiClient.pdb" DestinationFolder="C:\\Projects\\fieldsupport\\libs\\" />
+  </Target>
+
 </Project>
